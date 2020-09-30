@@ -66,4 +66,8 @@ Route::group(['middleware'=>'auth'], function () {
 	Route::get('/proveedores/detalle/{proveedor_id}', 'ProveedorController@detalle');
 
 	Route::get('/indicadores/masVendidos/{mes}', 'IndicadoresController@masVendidos');
+
+
+	Route::get('/conceptos/nuevo', 'ConceptoController@nuevo');
+	Route::post('/conceptos/guardar', 'ConceptoController@guardar');
 });
